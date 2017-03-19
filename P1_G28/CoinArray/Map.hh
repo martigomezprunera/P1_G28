@@ -5,16 +5,18 @@ class Map
 {
 public:
 	//CONSTRUCTORES Y DESTRUCTORES
-	Map(void);													
+	Map(int dificultad);													
 	~Map(void);
 
 	//METODOS
-	void ini_map(int numRows, int numColumns, int dificultad);
+	void ini_map();													//CREAR MAPA
+	void change(int numRows, int numColumns, int value);			//CAMBIAR VALOR DE UNA CELDA
+	void print_pantalla();											//PRINTAR POR PANTALLA LOS VALORES
 
 private:
+
 	//CONSTANTES
-
-
+	
 	//ATRIBUTOS												
 	int **md;
 	int numRows, numColumns, dificultad;
