@@ -18,7 +18,11 @@ public:
 	~Player();
 
 	//METODOS
-	void update_player(Input::Key key);
+	void update_player(Input::Key key);			//CAMBIAR LA POSICION DEL JUGADOR SEGUN LA TECLA
+	int getX();									//X DONDE ESTA EL JUGADOR
+	int getY();									//Y DONDE ESTA EL JUGADOR
+	int setX(int new_x);						//RESTABLECEMOS LA POSICION X DEL JUGADOR
+	int setY(int new_y);						//RESTABLECEMOS LA POSICION Y DEL JUGADOR
 
 private:
 	//CONSTANTES
@@ -26,4 +30,5 @@ private:
 	//ATRIBUTOS PRIVADOS
 	Map &map;
 	CoinManager &coin;
+	int x, y;
 };

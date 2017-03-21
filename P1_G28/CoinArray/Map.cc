@@ -36,17 +36,27 @@ Map::~Map(void)
 	}
 }
 
-void Map::change(int numRows, int numColumns, int value)
+void Map::change(int numRows, int numColumns, char value)
 {
 	for (int i = 0; i<numRows; i++)
 	{
 		for (int j = 0; j<numColumns; j++)
 		{
-			md[i][j] = value; //Mi valor
+			md[i][j] = value; //MI VALOR
 		}
 	}
 }
 
 void Map::print_pantalla()
 {
+}
+
+int Map::getNumRows()
+{
+	return numRows;
+}
+
+int Map::getNumColumns()
+{
+	return numColumns;
 }
