@@ -19,7 +19,6 @@ private:
 	
 	//ATRIBUTOS												
 	int **md;
-	int numRows, numColumns, dificultad;
-
+	int numRows, numColumns;
 
 };

@@ -18,7 +18,7 @@ private:
 	//CONSTANTES
 
 	//ATRIBUTOS
-	Map &mymap;
+	Map &mapa;
 	int x;
 	int y;
 };

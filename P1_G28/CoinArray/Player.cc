@@ -1,8 +1,9 @@
 #include "Player.hh"
 #include "Map.hh"
 
-Player::Player(Map &mymap)
+Player::Player(Map & mymap)
 {
+	mymap = mapa;
 }
 
 Player::~Player()
