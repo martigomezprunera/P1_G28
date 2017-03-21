@@ -5,6 +5,9 @@
 class Map
 {
 public:
+	//ATRIBUTOS PUBLCIOS
+	int numRows, numColumns;
+
 	//CONSTRUCTORES Y DESTRUCTORES
 	Map(int dificultad);													
 	~Map(void);
@@ -17,8 +20,7 @@ private:
 
 	//CONSTANTES
 	
-	//ATRIBUTOS												
+	//ATRIBUTOS PRIVADOS									
 	int **md;
-	int numRows, numColumns;
 
 };

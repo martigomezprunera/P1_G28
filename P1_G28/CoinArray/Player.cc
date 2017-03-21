@@ -1,15 +1,18 @@
 #include "Player.hh"
 #include "Map.hh"
+#include "CoinManager.hh"
 
-Player::Player(Map & mymap)
+Player::Player(Map &mymap, CoinManager &mycoin) :map(mymap), coin(mycoin)
 {
-	mymap = mapa;
+
 }
 
 Player::~Player()
 {
 }
 
-void Player::ini_player()
+void Player::update_player(Input::Key key)
 {
+	
 }
+

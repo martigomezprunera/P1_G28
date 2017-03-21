@@ -38,7 +38,13 @@ Map::~Map(void)
 
 void Map::change(int numRows, int numColumns, int value)
 {
-	
+	for (int i = 0; i<numRows; i++)
+	{
+		for (int j = 0; j<numColumns; j++)
+		{
+			md[i][j] = value; //Mi valor
+		}
+	}
 }
 
 void Map::print_pantalla()
