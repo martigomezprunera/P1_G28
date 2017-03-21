@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdlib>
 #include <ostream>
 
 class Map
@@ -9,7 +10,7 @@ public:
 	~Map(void);
 
 	//METODOS
-	void ini_map();													//CREAR MAPA
+	//void ini_map();
 	void change(int numRows, int numColumns, int value);			//CAMBIAR VALOR DE UNA CELDA
 	void print_pantalla();											//PRINTAR POR PANTALLA LOS VALORES
 

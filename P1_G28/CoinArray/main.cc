@@ -1,8 +1,26 @@
 #include <iostream>
 #include <string>
 #include <ctime>
+#include <cstdlib>
 
 int main()
 {
-	srand(static_cast<unsigned> (time(nullptr)));		//SEMILLA DE RANDOM
+	int difficult;
+	//srand(static_cast<unsigned> (time(nullptr)));		//SEMILLA DE RANDOM
+
+	//MOSTRAMOS POR PANTALLA LA DIFICULTAD DEL NIVEL Y SALUDOS
+	std::cout << "////////// COIN RACE //////////\n";
+	std::cout << "CONTROLS: Use WASD to move the player\n\n";
+
+	std::cout << "Choose the difficulty:\n";
+	std::cout << "1 - EASY\n";
+	std::cout << "2 - MEDIUM\n";
+	std::cout << "3 - HARDCORE\n";
+
+	do {
+
+		std::cin >> difficult;
+
+	} while (difficult>3 || difficult<1);
+
 }
