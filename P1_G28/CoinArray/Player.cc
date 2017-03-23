@@ -24,27 +24,48 @@ void Player::update_player(Input::Key key)
 	switch (key)
 	{
 	case Input::Key::W:
-		previous_y = previous_y + 1;
-		setY(previous_y);
+		if (y > 0)
+		{
+			y = y + 1;
+			setY(y);
+		}
 		break;
 	case Input::Key::A:
-		previous_x = previous_x - 1;
-		setX(previous_x);
+		if (previous_x > 0)
+		{
+			x = x - 1;
+			setX(x);
+		}
 		break;
 	case Input::Key::S:
-		previous_y = previous_y - 1;
-		setY(previous_y);
+		if (y > map.getNumColumns - 1)
+		{
+			y = y - 1;
+			setY(y);
+		}
 		break;
 	case Input::Key::D:
-		previous_x = previous_x + 1;
-		setX(previous_x);
+		if (x < map.getNumRows - 1)
+		{
+			x = x + 1;
+			setX(x);
+		}
 		break;
 	default:
 		break;
 	}
 
+	//UPDATEAMOS LA SCORE
+	/*if (mapa.getCell(previous_x, previous_y) == '$')
+	{
+		score++;
+		coin.updateCoins();
+	}*/
+	
 	//UPDATEAMOS LA POSICION DEL JUGADOR
 	map.change(previous_x, previous_y, '@');
+	map.change(x, y, '@');
+
 
 }
 
