@@ -56,7 +56,7 @@ void Player::update_player(Input::Key key)
 	}
 
 	//UPDATEAMOS LA SCORE
-	/*if (mapa.getCell(previous_x, previous_y) == '$')
+	/*if (mapa.getCell(x, y) == '$')
 	{
 		score++;
 		coin.updateCoins();
