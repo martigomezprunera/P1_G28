@@ -3,7 +3,9 @@
 #include <ctime>
 #include <cstdlib>
 #include <conio.h>
-#include "Input.hh"
+#include "Map.hh"
+#include "Player.hh"
+#include "CoinManager.hh"
 
 int main()
 {
@@ -22,6 +24,7 @@ int main()
 	do {
 
 		std::cin >> difficult;
+		
 
 	} while (difficult>3 || difficult<1);
 

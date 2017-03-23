@@ -1,5 +1,6 @@
 #include "Map.hh"
 #include <cstdlib>
+#include <iostream>
 
 Map::Map(int dificultad)
 {
@@ -49,6 +50,13 @@ void Map::change(int numRows, int numColumns, char value)
 
 void Map::print_pantalla()
 {
+	for (int i = 0; i<numRows; i++)
+	{
+		for (int j = 0; j<numColumns; j++)
+		{
+			std::cout << md[i][j];
+		}
+	}
 }
 
 int Map::getNumRows()

@@ -65,8 +65,6 @@ void Player::update_player(Input::Key key)
 	//UPDATEAMOS LA POSICION DEL JUGADOR
 	map.change(previous_x, previous_y, '@');
 	map.change(x, y, '@');
-
-
 }
 
 int Player::getX()
