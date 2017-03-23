@@ -1,12 +1,14 @@
-#include "Player.hh"
-#include "Map.hh"
-#include "CoinManager.hh"
+#include "Player.h"
+#include "CoinManager.h"
+#include "Player.h"
+#include "Input.h"
+#include <iostream>
 
 Player::Player(Map &mymap, CoinManager &mycoin) :map(mymap), coin(mycoin)
 {
 	//POSICIONAMOS EL JUGADOR EN EL MAPA
-	x = rand() % (map.getNumRows + 1);
-	y = rand () % (map.getNumColumns + 1);
+	x = (rand() % map.getNumRows());
+	y = (rand() % map.getNumColumns());
 
 	map.change(x, y, '@');
 }
@@ -27,28 +29,24 @@ void Player::update_player(Input::Key key)
 		if (y > 0)
 		{
 			y = y + 1;
-			setY(y);
 		}
 		break;
 	case Input::Key::A:
 		if (previous_x > 0)
 		{
 			x = x - 1;
-			setX(x);
 		}
 		break;
 	case Input::Key::S:
-		if (y > map.getNumColumns - 1)
+		if (y > map.getNumColumns() - 1)
 		{
 			y = y - 1;
-			setY(y);
 		}
 		break;
 	case Input::Key::D:
-		if (x < map.getNumRows - 1)
+		if (x < map.getNumRows() - 1)
 		{
 			x = x + 1;
-			setX(x);
 		}
 		break;
 	default:
@@ -75,15 +73,5 @@ int Player::getX()
 int Player::getY()
 {
 	return y;
-}
-
-int Player::setX(int new_x)
-{
-	x = new_x;
-}
-
-int Player::setY(int new_y)
-{
-	y = new_y;
 }
 

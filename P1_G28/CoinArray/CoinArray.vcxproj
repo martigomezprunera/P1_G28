@@ -146,16 +146,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CoinManager.cc" />
-    <ClCompile Include="main.cc" />
-    <ClCompile Include="Map.cc" />
-    <ClCompile Include="Player.cc" />
+    <ClCompile Include="CoinManager.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CoinManager.hh" />
-    <ClInclude Include="Input.hh" />
-    <ClInclude Include="Map.hh" />
-    <ClInclude Include="Player.hh" />
+    <ClInclude Include="CoinManager.h" />
+    <ClInclude Include="Input.h" />
+    <ClInclude Include="Map.h" />
+    <ClInclude Include="Player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

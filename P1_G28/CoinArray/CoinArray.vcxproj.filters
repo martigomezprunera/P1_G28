@@ -15,30 +15,30 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Map.cc">
+    <ClCompile Include="CoinManager.cpp">
       <Filter>Archivos de recursos</Filter>
     </ClCompile>
-    <ClCompile Include="main.cc">
+    <ClCompile Include="main.cpp">
       <Filter>Archivos de recursos</Filter>
     </ClCompile>
-    <ClCompile Include="CoinManager.cc">
+    <ClCompile Include="Map.cpp">
       <Filter>Archivos de recursos</Filter>
     </ClCompile>
-    <ClCompile Include="Player.cc">
+    <ClCompile Include="Player.cpp">
       <Filter>Archivos de recursos</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Map.hh">
+    <ClInclude Include="CoinManager.h">
       <Filter>Archivos de código fuente</Filter>
     </ClInclude>
-    <ClInclude Include="Player.hh">
+    <ClInclude Include="Input.h">
       <Filter>Archivos de código fuente</Filter>
     </ClInclude>
-    <ClInclude Include="CoinManager.hh">
+    <ClInclude Include="Map.h">
       <Filter>Archivos de código fuente</Filter>
     </ClInclude>
-    <ClInclude Include="Input.hh">
+    <ClInclude Include="Player.h">
       <Filter>Archivos de código fuente</Filter>
     </ClInclude>
   </ItemGroup>
