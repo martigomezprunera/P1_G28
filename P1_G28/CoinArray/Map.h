@@ -12,11 +12,13 @@ public:
 	~Map(void);
 
 	//METODOS
-	void change(int numRows, int numColumns, char value);			//CAMBIAR VALOR DE UNA CELDA
-	void print_pantalla();											//PRINTAR POR PANTALLA LOS VALORES										//POSICIONAR PUNTOS EN EL MAPA
-	int getNumRows();												//DEVOLVER NUMERO DE FILAS
-	int getNumColumns();											//DEVOLVER NUMERO DE COLUMNAS
+	void change(int x, int y, char value);							//CAMBIAR VALOR DE UNA CELDA
+	void print_pantalla();										//PRINTAR POR PANTALLA LOS VALORES
+	//int getNumRows();												//DEVOLVER NUMERO DE FILAS
+	//int getNumColumns();											//DEVOLVER NUMERO DE COLUMNAS
 	char celda(int x, int y);										//CELDA DONDE ESTAMOS POSICIONADOS
+	//friend std::ostream& operator<< (std::ostream &out, Map map);	//PRINTAR POR PANTALLA LOS VALORES
+
 
 private:
 
@@ -24,4 +26,5 @@ private:
 	
 	//ATRIBUTOS PRIVADOS									
 	char **md;
+
 };

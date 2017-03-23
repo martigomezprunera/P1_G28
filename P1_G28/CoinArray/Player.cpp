@@ -4,11 +4,12 @@
 #include "Input.h"
 #include <iostream>
 
-Player::Player(Map &mymap, CoinManager &mycoin) :map(mymap), coin(mycoin), score(0)
+Player::Player(Map &mymap, CoinManager &mycoin) :map(mymap), coin(mycoin)
 {
 	//POSICIONAMOS EL JUGADOR EN EL MAPA
-	x = (rand() % map.getNumRows());
-	y = (rand() % map.getNumColumns());
+	score = 0;
+	x = rand() % map.numRows;
+	y = rand() % map.numColumns;
 
 	map.change(x, y, '@');
 }
@@ -26,27 +27,27 @@ void Player::update_player(Input::Key key)
 	switch (key)
 	{
 	case Input::Key::W:
-		if (y > 0)
-		{
-			y = y + 1;
-		}
-		break;
-	case Input::Key::A:
 		if (previous_x > 0)
 		{
 			x = x - 1;
 		}
 		break;
-	case Input::Key::S:
-		if (y > map.getNumColumns() - 1)
+	case Input::Key::A:
+		if (previous_y > 0)
 		{
 			y = y - 1;
 		}
 		break;
-	case Input::Key::D:
-		if (x < map.getNumRows() - 1)
+	case Input::Key::S:
+		if (previous_x < map.numColumns)
 		{
 			x = x + 1;
+		}
+		break;
+	case Input::Key::D:
+		if (previous_y < map.numRows)
+		{
+			y = y + 1;
 		}
 		break;
 	default:
@@ -61,7 +62,7 @@ void Player::update_player(Input::Key key)
 	}
 	
 	//UPDATEAMOS LA POSICION DEL JUGADOR
-	map.change(previous_x, previous_y, '@');
+	map.change(previous_x, previous_y, '.');
 	map.change(x, y, '@');
 }
 
