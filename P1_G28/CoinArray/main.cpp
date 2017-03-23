@@ -36,7 +36,7 @@ int main()
 		Player player1(map1, coin1);
 
 		//PRINTAMOS MAPA POR PANTALLA
-		map1.print_pantalla(); 
+		std::cout << map1 << std::endl;
 		std::cout << "MONEY: " << player1.getScore() << "/" << money;
 
 		Input::Key k;
@@ -48,7 +48,8 @@ int main()
 			{
 				player1.update_player(k);
 				system("cls");
-				map1.print_pantalla();
+				//map1.print_pantalla();
+				std::cout << map1 << std::endl;
 				std::cout << "MONEY: " << player1.getScore() << "/" << money;
 			}
 

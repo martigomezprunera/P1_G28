@@ -26,7 +26,7 @@ void CoinManager::new_money()
 	int counter = 0;
 	do 
 	{
-		float max_monedas = ((mapa.numColumns * mapa.numRows) /100 * 13);
+		float max_monedas = ((mapa.numColumns * mapa.numRows) / 100 * 13);
 		float min_monedas = ((mapa.numColumns * mapa.numRows) / 100 * 3);
 		c_monedas = static_cast<int>((rand() % static_cast<int>(max_monedas - min_monedas) + min_monedas));
 	

@@ -27,28 +27,16 @@ void Player::update_player(Input::Key key)
 	switch (key)
 	{
 	case Input::Key::W:
-		if (previous_x > 0)
-		{
 			x = x - 1;
-		}
 		break;
 	case Input::Key::A:
-		if (previous_y > 0)
-		{
 			y = y - 1;
-		}
 		break;
 	case Input::Key::S:
-		if (previous_x < map.numColumns)
-		{
 			x = x + 1;
-		}
 		break;
 	case Input::Key::D:
-		if (previous_y < map.numRows)
-		{
 			y = y + 1;
-		}
 		break;
 	default:
 		break;
@@ -66,7 +54,7 @@ void Player::update_player(Input::Key key)
 	map.change(x, y, '@');
 }
 
-int Player::getX()
+/*int Player::getX()
 {
 	return x;
 }
@@ -74,7 +62,7 @@ int Player::getX()
 int Player::getY()
 {
 	return y;
-}
+}*/
 
 int Player::getScore()
 {
