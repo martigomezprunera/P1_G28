@@ -4,7 +4,7 @@
 #include "Input.h"
 #include <iostream>
 
-Player::Player(Map &mymap, CoinManager &mycoin) :map(mymap), coin(mycoin)
+Player::Player(Map &mymap, CoinManager &mycoin) :map(mymap), coin(mycoin), score(0)
 {
 	//POSICIONAMOS EL JUGADOR EN EL MAPA
 	x = (rand() % map.getNumRows());
@@ -54,11 +54,11 @@ void Player::update_player(Input::Key key)
 	}
 
 	//UPDATEAMOS LA SCORE
-	/*if (mapa.getCell(x, y) == '$')
+	if (map.celda(x, y) == '$')
 	{
 		score++;
-		coin.updateCoins();
-	}*/
+		coin.change_money();
+	}
 	
 	//UPDATEAMOS LA POSICION DEL JUGADOR
 	map.change(previous_x, previous_y, '@');
@@ -73,5 +73,10 @@ int Player::getX()
 int Player::getY()
 {
 	return y;
+}
+
+int Player::getScore()
+{
+	return score;
 }
 

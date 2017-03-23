@@ -21,6 +21,7 @@ public:
 	void update_player(Input::Key key);			//CAMBIAR LA POSICION DEL JUGADOR SEGUN LA TECLA
 	int getX();									//X DONDE ESTA EL JUGADOR
 	int getY();									//Y DONDE ESTA EL JUGADOR
+	int getScore();								//DEVOLVEMOS EL SCORE DEL JUGADOR
 
 private:
 	//CONSTANTES
@@ -28,5 +29,5 @@ private:
 	//ATRIBUTOS PRIVADOS
 	Map &map;
 	CoinManager &coin;
-	int x, y;
+	int x, y, score;
 };

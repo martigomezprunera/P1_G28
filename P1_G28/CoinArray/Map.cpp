@@ -3,8 +3,8 @@
 
 Map::Map(int dificultad)
 {
-	numColumns = (rand() % (dificultad * 5 * 2) - (5 * dificultad) + 5 * dificultad);
-	numRows = (rand() % (dificultad * 5 * 2) - (5 * dificultad) + 5 * dificultad);
+	numColumns = (5 * dificultad + rand() % 5);
+	numRows	= (5 * dificultad + rand() % 5);
 
 	//CREAMOS MATRIZ
 	//TANTOS PUNTEROS COMO FILAS
