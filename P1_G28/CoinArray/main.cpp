@@ -14,7 +14,7 @@
 int main()
 {
 	srand(static_cast<unsigned int>(time(nullptr)));		//SEMILLA DE RANDOM
-	int difficult, money;
+	int difficult, money, tam_bits;
 
 	//MOSTRAMOS POR PANTALLA LA DIFICULTAD DEL NIVEL Y SALUDOS
 	do {
@@ -30,7 +30,8 @@ int main()
 		std::cout << "3 - HARDCORE\n";
 		std::cout << "Difficult: ";
 		std::cin >> difficult;
-	} while (difficult < 1 || difficult>3);
+
+	} while ((difficult < 1 || difficult>3));
 
 	//NUMERO DE MONEDAS EN EL MAPA
 	money = ((30 * difficult) + (rand() % 30));
@@ -48,9 +49,13 @@ int main()
 	std::cout << "MONEY: " << player1.getScore() << "/" << money;
 
 	Input::Key k;
+	clock_t comienzo;
+	comienzo = clock();
 
 	do
 	{
+		//CALCULAMOS TIEMPO DE INICIO
+
 		k = Input::getKey();
 		if (k != Input::Key::NONE)
 		{
@@ -64,7 +69,10 @@ int main()
 
 	//map1.~Map();
 	system("cls");
-	std::cout << "ERES UN CRACK!!";
+	std::cout << "ERES UN CRACK!!\n";
+	long int tiempo_restante = clock() - comienzo;
+
+	std::cout << "Has tardado: " << tiempo_restante/CLOCKS_PER_SEC << " segundos" << std::endl;
 	system("pause");
 
 	return 0;
