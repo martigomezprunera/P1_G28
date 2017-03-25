@@ -24,9 +24,10 @@ Map::Map(int dificultad)
 Map::~Map(void)
 {
 	//LIBERAMOS MEMORIA
-	for (int i = 0; i < numRows; i++)
+	/*for (int i = 0; i < numRows; i++)
 		delete[] md[i];
 	delete[] * md;
+	md = nullptr;*/
 }
 
 void Map::change(int x, int y, char value)

@@ -10,7 +10,7 @@ public:
 
 	//CONSTRUCTORES Y DESTRUCTORES
 	Map(int dificultad);													
-	~Map(void);
+	~Map();
 
 	//METODOS
 	void print_pantalla();											//PRINTAR POR PANTALLA LOS VALORES
