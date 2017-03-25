@@ -50,3 +50,4 @@ int CoinManager::getMoney()
 {
 	return c_monedas;
 }
+
