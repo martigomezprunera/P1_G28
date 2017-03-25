@@ -16,3 +16,4 @@ private:
 	Map &mapa;
 	int c_monedas;
 };
+
