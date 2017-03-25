@@ -21,22 +21,34 @@ Player::~Player()
 
 void Player::update_player(Input::Key key)
 {
-	int previous_x = getX();
-	int previous_y = getY();
+	int previous_x = x;
+	int previous_y = y;
 
 	switch (key)
 	{
 	case Input::Key::W:
+		if (x  > 0)
+		{
 			x = x - 1;
+		}
 		break;
 	case Input::Key::A:
+		if ( y > 0)
+		{
 			y = y - 1;
+		}
 		break;
 	case Input::Key::S:
+		if ( x < map.numRows - 1)
+		{
 			x = x + 1;
+		}
 		break;
 	case Input::Key::D:
+		if ( y < map.numColumns - 1)
+		{
 			y = y + 1;
+		}
 		break;
 	default:
 		break;

@@ -3,6 +3,7 @@
 #include <ctime>
 #include <cstdlib>
 #include <conio.h>
+
 #include "Map.h"
 #include "Player.h"
 #include "CoinManager.h"
@@ -24,36 +25,40 @@ int main()
 		std::cout << "3 - HARDCORE\n";
 		std::cin >> difficult;
 	} while (difficult < 1 || difficult>3);
-	
-		//NUMERO DE MONEDAS EN EL MAPA
-		money = ((30 * difficult) + (rand() % 30));
-		
-		//CREAMOS OBJETO MAPA
-		Map map1(difficult);
-		//CREAMOS OBJETO COINMANAGER
-		CoinManager coin1(map1);
-		//CREAMOS OBJETO PLAYER
-		Player player1(map1, coin1);
 
-		//PRINTAMOS MAPA POR PANTALLA
-		std::cout << map1 << std::endl;
-		std::cout << "MONEY: " << player1.getScore() << "/" << money;
+	//NUMERO DE MONEDAS EN EL MAPA
+	//money = ((30 * difficult) + (rand() % 30));
+	money = ((1 * difficult) + (rand() % 1));
 
-		Input::Key k;
+	//CREAMOS OBJETO MAPA
+	Map map1(difficult);
+	//CREAMOS OBJETO COINMANAGER
+	CoinManager coin1(map1);
+	//CREAMOS OBJETO PLAYER
+	Player player1(map1, coin1);
 
-		do
+	//PRINTAMOS MAPA POR PANTALLA
+	map1.print_pantalla();
+	std::cout << "MONEY: " << player1.getScore() << "/" << money;
+
+	Input::Key k;
+
+	do
+	{
+		k = Input::getKey();
+		if (k != Input::Key::NONE)
 		{
-			k = Input::getKey();
-			if (k !=Input::Key::NONE)
-			{
-				player1.update_player(k);
-				system("cls");
-				//map1.print_pantalla();
-				std::cout << map1 << std::endl;
-				std::cout << "MONEY: " << player1.getScore() << "/" << money;
-			}
+			player1.update_player(k);
+			system("cls");
+			map1.print_pantalla();
+			std::cout << "MONEY: " << player1.getScore() << "/" << money;
+		}
 
-		}while((k != Input::Key::ESC) && (player1.getScore()<money));
+	} while ((k != Input::Key::ESC) && (player1.getScore() < money));
 
+	//map1.~Map();
+	system("cls");
+	std::cout << "ERES UN CRACK";
 
+	return 0;
 }
